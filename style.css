@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Poppins-italic;
+  src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+:root {
+  --Mobile: 375px;
+  --Desktop: 1440px;
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+  --Fontsize: 32px;
+  --Family: Poppins;
+  --weightM: 700;
+  --WeightsS: 400i;
+  --weightL: 800i;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: var(--Lightgrey);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+  height: auto;
+  padding: 2em;
+  border-radius: 10px 10px 50px 10px;
+}
+.inputs {
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  font-weight: var(--weightM);
+}
+.inputs input {
+  padding: 1em;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-container input {
+  width: 50%;
+}
+.input-container label {
+  letter-spacing: 5px;
+  font-weight: var(--weightM);
+}
+.underline {
+  display: flex;
+  align-items: center;
+}
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: black;
+}
+.content {
+  font-family: "Poppins-italic", serif;
+  font-size: 4em;
+  font-weight: 800;
+}
+.content span[class^="user"] {
+  color: var(--Purple);
+}
+.inputs div[class^="input-container"] {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+input::placeholder {
+  /* font-size: 2em; */
+  font-weight: bold;
+}
+.btn {
+  background-color: var(--Purple);
+  border-radius: 50%;
+  padding: 1.2em;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--Offblack);
+}
+.error {
+  border-color: red;
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 0.5em;
+  }
+  .container {
+    width: 80%;
+  }
+  .inputs input {
+    width: 50px;
+  }
+  .underline {
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+  }
+  .line {
+    width: 100%;
+  }
+  .btn {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
